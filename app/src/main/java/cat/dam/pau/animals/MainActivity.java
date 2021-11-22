@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         final ImageButton menor = (ImageButton) findViewById(R.id.menor);
         final ImageButton igual = (ImageButton) findViewById(R.id.igual);
         final ImageButton major = (ImageButton) findViewById(R.id.major);
-        final GridLayout layout = (GridLayout) findViewById(R.id.GL_elephants);
+        final GridLayout layout = (GridLayout) findViewById(R.id.GL_superior);
         menor.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             public void onClick(View v) {
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        gridLayout = (GridLayout) findViewById(R.id.GL_elephants);
+        gridLayout = (GridLayout) findViewById(R.id.GL_superior);
         for (int i = 0; i <elephant ; i++) {
             ImageView n = new ImageView(this);
             n.setImageResource(R.drawable.elefant);
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             n.setLayoutParams(params);
             gridLayout.addView(n);
         }
-        gridLayout = (GridLayout) findViewById(R.id.GL_lions);
+        gridLayout = (GridLayout) findViewById(R.id.GL_inferior);
         for (int i = 0; i <lion ; i++) {
             ImageView n = new ImageView(this);
             n.setImageResource(R.drawable.lleo);
