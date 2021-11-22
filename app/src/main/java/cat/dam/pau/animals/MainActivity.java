@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Random r = new Random();
-        final int lion = r.nextInt(10)+1;
-        final int elephant = r.nextInt(10)+1;
+        final int random_lleo = r.nextInt(10)+1;
+        final int random_elefant = r.nextInt(10)+1;
         final TextView tv = findViewById(R.id.resultat);
         final ImageButton menor = (ImageButton) findViewById(R.id.menor);
         final ImageButton igual = (ImageButton) findViewById(R.id.igual);
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         menor.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             public void onClick(View v) {
-                if(lion > elephant) {
+                if(random_lleo > random_elefant) {
                     tv.setText("Es correcte");
                 }
                 else tv.setText("Es Incorrecte!!!");
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         igual.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             public void onClick(View v) {
-                if(elephant == lion) {
+                if(random_elefant == random_lleo) {
                     tv.setText("Es correcte");
                 }
                 else tv.setText("Es Incorrecte!!!");
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         major.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             public void onClick(View v) {
-                if(elephant > lion) {
+                if(random_elefant > random_lleo) {
                     tv.setText("Es correcte");
                 }
                 else tv.setText("Es Incorrecte!!!");
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         gridLayout = (GridLayout) findViewById(R.id.GL_superior);
-        for (int i = 0; i <elephant ; i++) {
+        for (int i = 0; i <random_elefant ; i++) {
             ImageView n = new ImageView(this);
             n.setImageResource(R.drawable.elefant);
             n.setAdjustViewBounds(true);
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             gridLayout.addView(n);
         }
         gridLayout = (GridLayout) findViewById(R.id.GL_inferior);
-        for (int i = 0; i <lion ; i++) {
+        for (int i = 0; i <random_lleo ; i++) {
             ImageView n = new ImageView(this);
             n.setImageResource(R.drawable.lleo);
             n.setAdjustViewBounds(true);
